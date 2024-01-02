@@ -18,7 +18,9 @@ const stripe=require("stripe")("sk_test_51OMERySJb30zHYKXRtntVAOMPx8ClokJnGOlIPN
 const saltround=10;
 const secretkey="Nagara"
 
-let course1={}
+let course1=""
+
+
 
 router1.get("/courses",async (req,res)=>{
     for(let i=0;i<pastmock.length;i++){
@@ -71,6 +73,7 @@ router1.post("/login",async (req,res)=>{
         console.log(validmaildetails,"----------")
         if(validmaildetails){
             // console.log({msg:"email already exists"}) 
+            course1=logindetails.email
             
     
             const comparedetails= bcrypt.compareSync(logindetails.password,validmaildetails.password)
@@ -240,5 +243,9 @@ router1.get("/Cancel",(req,res)=>{
     return res.send({msg:"cancel"})
 })
 
-
+router1.post("/bought",async (req,res)=>{
+    const buyingcourses=coursestr.find({email:{$eq:course1}})
+    
+    return res.send(buyingcourses)
+})
 module.exports=router1
