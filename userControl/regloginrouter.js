@@ -74,6 +74,7 @@ router1.post("/login",async (req,res)=>{
         if(validmaildetails){
             // console.log({msg:"email already exists"}) 
             course1=logindetails.email
+            console.log(course1)
             
     
             const comparedetails= bcrypt.compareSync(logindetails.password,validmaildetails.password)
@@ -223,8 +224,8 @@ const lineItems = products.map((prod) => ({
       line_items: lineItems,
       mode: "payment",
       
-      success_url: "http://localhost:3000/Success",
-      cancel_url: "http://localhost:3000/Cancel",
+      success_url: "https://prepbytesclonebackend.onrender.com/Success",
+      cancel_url: "https://prepbytesclonebackend.onrender.com/Cancel",
     });
 
     res.json({ id: session.id });
@@ -236,7 +237,7 @@ const lineItems = products.map((prod) => ({
 
 
 router1.get("/Success",(req,res)=>{
-    return res.send("payment successful")
+    return res.send(htmlsuccesspage)
    
 })
 router1.get("/Cancel",(req,res)=>{
@@ -244,7 +245,8 @@ router1.get("/Cancel",(req,res)=>{
 })
 
 router1.post("/bought",async (req,res)=>{
-    const buyingcourses=coursestr.find({email:{$eq:course1}})
+    const buyingcourses=await coursestr.find({email:{$eq:course1}})
+    console.log(buyingcourses)
     
     return res.send(buyingcourses)
 })
