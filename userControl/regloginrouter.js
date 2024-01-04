@@ -253,7 +253,7 @@ router1.get("/Cancel",(req,res)=>{
     return res.send({msg:"cancel"})
 })
 
-router1.post("/bought",async (req,res)=>{
+router1.get("/bought",async (req,res)=>{
     const buyingcourses=await coursestr.find({})
     console.log(buyingcourses)
     
