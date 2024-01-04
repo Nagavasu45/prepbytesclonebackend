@@ -173,8 +173,8 @@ const htmlsuccesspage = `
 <div>
     <h1>Payment successfull and order confirmed</h1>
     <div>
-    // <a href="https://earnest-buttercream-28d49b.netlify.app/">
-    <a href="/"> <button className=" bot1">continue your shopping</button></a>
+    // <a href="https://moonlit-cranachan-da39c6.netlify.app/">
+    <a href="https://moonlit-cranachan-da39c6.netlify.app/"> <button className=" bot1">continue your shopping</button></a>
     </div>
     </div>
     </body>
@@ -197,8 +197,17 @@ router1.post("/createcheckout1", async (req, res) => {
     //const dbres1=await reg.create(user)
     const storeitem=products.map((prod1)=>({
             useremail:prod1.useremail,
-            bookname:prod1.nameofthecourse,
-             price:prod1.price
+            id:prod1.id,
+            catdivd:prod1.catdivd,
+            nameofthecourse:prod1.nameofthecourse,
+            imgsrc:prod1.imgsrc,
+            date:prod1.date,
+            cat1:prod1.cat1,
+            participants:prod1.participants,
+            cat2:prod1.cat2,
+            duration:prod1.duration,
+            cat3:prod1.cat3,
+            price:prod1.price
 
 }))
     const ressee=coursestr.create(storeitem[0])
