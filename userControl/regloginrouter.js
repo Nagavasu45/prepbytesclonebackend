@@ -254,7 +254,7 @@ router1.get("/Cancel",(req,res)=>{
 })
 
 router1.post("/bought",async (req,res)=>{
-    const buyingcourses=await coursestr.find({email:{$eq:course1}})
+    const buyingcourses=await coursestr.find({})
     console.log(buyingcourses)
     
     return res.send(buyingcourses)
