@@ -254,7 +254,7 @@ router1.get("/Cancel",(req,res)=>{
 })
 
 router1.get("/bought",async (req,res)=>{
-    const buyingcourses=await coursestr.find({})
+    const buyingcourses=await coursestr.find({email:{$eq:course1}})
     console.log(buyingcourses)
     
     return res.send(buyingcourses)
