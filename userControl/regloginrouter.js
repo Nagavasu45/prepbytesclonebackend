@@ -152,7 +152,9 @@ const htmlsuccesspage = `
         }
         h1 {
             color: blue;
-            margin-left:25%;
+            margin:auto;
+            margin-bottom:30px;
+            
         }
         .cont{
             display:flex;
@@ -163,7 +165,8 @@ const htmlsuccesspage = `
         }
        button{
             
-            margin-left:46%;
+            margin:auto;
+            margin-top:30px;
        }
     </style>
     <title>payment</title>
@@ -171,10 +174,10 @@ const htmlsuccesspage = `
 <body>
 <div className="cont">
 <div>
-    <h1>Payment successfull and order confirmed</h1>
+    <h1>Payment successfull and course confirmed</h1>
     <div>
     // <a href="https://moonlit-cranachan-da39c6.netlify.app/">
-     <button className=" bot1"><NavLink to="/">continue your shopping</NavLink></button>
+     <button className=" bot1"><NavLink to="/">continue with your course</NavLink></button>
     </div>
     </div>
     </body>
