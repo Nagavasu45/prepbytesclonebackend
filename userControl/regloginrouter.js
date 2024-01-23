@@ -154,7 +154,7 @@ const htmlsuccesspage = `
         }
         h1 {
             color: blue;
-            margin-left:15%;
+            margin-left:20%;
             margin-bottom:30px;
             
         }
@@ -167,7 +167,7 @@ const htmlsuccesspage = `
         }
        button{
             
-            margin:40%;
+            margin:45%;
             margin-top:30px;
        }
     </style>
