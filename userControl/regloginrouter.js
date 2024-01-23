@@ -12,13 +12,15 @@ const pastmock=require("./alldata");
 const { register } = require("module");
 
 
+
 const router1=require("express").Router();
 router1.use(cors())
 const stripe=require("stripe")("sk_test_51OMERySJb30zHYKXRtntVAOMPx8ClokJnGOlIPN1IBbaP06OUAf0e4jFlBPAnUsEPy6uK7zORnT48RFKNRH14DC2002ZAtE6HX")
 const saltround=10;
 const secretkey="Nagara"
 
-let course1=""
+let course1="";
+let storeitem=" "
 
 
 
@@ -198,7 +200,7 @@ router1.post("/createcheckout1", async (req, res) => {
 //     const ressee=coursestr.create(course1)
 //     console.log(ressee)
     //const dbres1=await reg.create(user)
-    const storeitem=products.map((prod1)=>({
+     storeitem=products.map((prod1)=>({
             useremail:prod1.useremail,
             id:prod1.id,
             catdivd:prod1.catdivd,
@@ -213,8 +215,7 @@ router1.post("/createcheckout1", async (req, res) => {
             price:prod1.price
 
 }))
-    const ressee=coursestr.create(storeitem[0])
-     console.log(ressee)
+    
 
 
 const lineItems = products.map((prod) => ({
@@ -249,6 +250,8 @@ const lineItems = products.map((prod) => ({
 
 
 router1.get("/Success",(req,res)=>{
+    const ressee=coursestr.create(storeitem[0])
+     console.log(ressee)
     return res.send(htmlsuccesspage)
    
 })
