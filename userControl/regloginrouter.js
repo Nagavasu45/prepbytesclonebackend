@@ -154,7 +154,7 @@ const htmlsuccesspage = `
         }
         h1 {
             color: blue;
-            margin-left:20%;
+            text-align:"center";
             margin-bottom:30px;
             
         }
@@ -167,8 +167,11 @@ const htmlsuccesspage = `
         }
        button{
             
-            margin:45%;
+            // margin:45%;
             margin-top:30px;
+       }
+       .t1{
+        align-items:"center";
        }
     </style>
     <title>payment</title>
@@ -179,7 +182,7 @@ const htmlsuccesspage = `
     <h1>Payment successfull and course confirmed</h1>
     <div>
     // <a href="https://moonlit-cranachan-da39c6.netlify.app/">
-     <button className=" bot1"><NavLink to="/">continue with your course</NavLink></button>
+     <div className="t1"><button className=" bot1"><NavLink to="/">continue with your course</NavLink></button></div>
     </div>
     </div>
     </body>
