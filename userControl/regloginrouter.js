@@ -170,6 +170,7 @@ const htmlsuccesspage = `
             
             // margin:45%;
             margin-top:30px;
+            margin-left:45%;
        }
       
     </style>
@@ -181,7 +182,7 @@ const htmlsuccesspage = `
     <h1>Payment successfull and course confirmed</h1>
     <div>
     
-     <div ><button className=" bot1"><NavLink to="/">continue with your course</NavLink></button></div>
+     <div ><button><NavLink to="/">continue with your course</NavLink></button></div>
     </div>
     </div>
     </body>
