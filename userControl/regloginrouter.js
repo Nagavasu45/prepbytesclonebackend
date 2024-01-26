@@ -159,10 +159,11 @@ const htmlsuccesspage = `
             
         }
         .cont{
-            display:flex;
-            align-items:center;
-            flex-direction:column;
+            // display:flex;
+             align-items:center;
+            // flex-direction:column;
             border:2px;
+            text-align:center;
             
         }
        button{
@@ -170,10 +171,7 @@ const htmlsuccesspage = `
             // margin:45%;
             margin-top:30px;
        }
-       .t1{
-        align-items:center;
-        text-align:center;
-       }
+      
     </style>
     <title>payment</title>
 </head>
@@ -183,7 +181,7 @@ const htmlsuccesspage = `
     <h1>Payment successfull and course confirmed</h1>
     <div>
     // <a href="https://moonlit-cranachan-da39c6.netlify.app/">
-     <div className="t1"><button className=" bot1"><NavLink to="/">continue with your course</NavLink></button></div>
+     <div ><button className=" bot1"><NavLink to="/">continue with your course</NavLink></button></div>
     </div>
     </div>
     </body>
