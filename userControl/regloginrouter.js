@@ -154,7 +154,7 @@ const htmlsuccesspage = `
         }
         h1 {
             color: blue;
-            text-align:"center";
+            text-align:center;
             margin-bottom:30px;
             
         }
@@ -171,7 +171,8 @@ const htmlsuccesspage = `
             margin-top:30px;
        }
        .t1{
-        align-items:"center";
+        align-items:center;
+        text-align:center;
        }
     </style>
     <title>payment</title>
