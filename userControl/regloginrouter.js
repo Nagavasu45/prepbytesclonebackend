@@ -180,7 +180,7 @@ const htmlsuccesspage = `
 <div>
     <h1>Payment successfull and course confirmed</h1>
     <div>
-    // <a href="https://moonlit-cranachan-da39c6.netlify.app/">
+    
      <div ><button className=" bot1"><NavLink to="/">continue with your course</NavLink></button></div>
     </div>
     </div>
