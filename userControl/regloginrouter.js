@@ -182,8 +182,7 @@ const htmlsuccesspage = `
     <h1>Payment successfull and course confirmed</h1>
     <div>
     
-      <div ><a href="/https://moonlit-cranachan-da39c6.netlify.app"><button>continue with your course</button></a></div>
-    
+     <div ><button><NavLink to="https://moonlit-cranachan-da39c6.netlify.app/">continue with your course</NavLink></button></div>
     </div>
     </div>
     </body>
@@ -197,7 +196,13 @@ router1.post("/createcheckout1", async (req, res) => {
   console.log(products,"-------------------------------");
   console.log(typeof(products))
 
-
+//   course1={useremail:mailid,
+//             bookname:specificdata.bookname,
+//             price:specificdata.price
+//         }
+//     const ressee=coursestr.create(course1)
+//     console.log(ressee)
+    //const dbres1=await reg.create(user)
      storeitem=products.map((prod1)=>({
             useremail:prod1.useremail,
             id:prod1.id,
@@ -248,8 +253,8 @@ const lineItems = products.map((prod) => ({
 });
 
 
-router1.get("/Success",async (req,res)=>{
-    const ressee=await coursestr.create(storeitem[0])
+router1.get("/Success",(req,res)=>{
+    const ressee=coursestr.create(storeitem[0])
     console.log(ressee)
     
     return res.send(htmlsuccesspage)
