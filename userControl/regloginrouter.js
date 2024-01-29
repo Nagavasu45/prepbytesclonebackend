@@ -245,8 +245,7 @@ const lineItems = products.map((prod) => ({
     });
 
     res.json({ id: session.id });
-    const ressee=coursestr.create(storeitem[0])
-    console.log(ressee)
+    
   } catch (error) {
     console.error('Error creating checkout session:', error);
     res.status(500).json({ error: 'Internal Server Error' });
@@ -255,6 +254,8 @@ const lineItems = products.map((prod) => ({
 
 
 router1.get("/Success",(req,res)=>{
+    const ressee=coursestr.create(storeitem[0])
+    console.log(ressee)
     
     return res.send(htmlsuccesspage)
    
