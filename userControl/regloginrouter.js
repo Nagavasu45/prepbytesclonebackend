@@ -20,7 +20,7 @@ const saltround=10;
 const secretkey="Nagara"
 
 let course1="";
-let storeitem=" "
+let storeitem=" ";
 
 
 
@@ -243,10 +243,10 @@ const lineItems = products.map((prod) => ({
       success_url: "https://prepbytesclonebackend.onrender.com/Success",
       cancel_url: "https://prepbytesclonebackend.onrender.com/Cancel",
     });
-
-    res.json({ id: session.id });
-    const ressee=coursestr.create(storeitem[0])
+    const ressee=await coursestr.create(storeitem[0])
     console.log(ressee)
+    res.json({ id: session.id });
+    
     
   } catch (error) {
     console.error('Error creating checkout session:', error);
