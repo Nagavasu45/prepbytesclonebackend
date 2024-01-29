@@ -182,7 +182,7 @@ const htmlsuccesspage = `
     <h1>Payment successfull and course confirmed</h1>
     <div>
     
-     <div ><NavLink to="https://moonlit-cranachan-da39c6.netlify.app/"><button>continue with your course</button></NavLink></div>
+     <div > <a href="https://moonlit-cranachan-da39c6.netlify.app/"> <button >continue with course</button></a></div>
     </div>
     </div>
     </body>
