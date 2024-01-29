@@ -159,16 +159,16 @@ const htmlsuccesspage = `
             
         }
         .cont{
-            // display:flex;
+            
              align-items:center;
-            // flex-direction:column;
+            
             border:2px;
             text-align:center;
             
         }
        button{
             
-            // margin:45%;
+            
             margin-top:30px;
             margin-left:45%;
        }
@@ -182,12 +182,13 @@ const htmlsuccesspage = `
     <h1>Payment successfull and course confirmed</h1>
     <div>
     
-     <div ><NavLink to="https://moonlit-cranachan-da39c6.netlify.app"><button>continue with your course</button></NavLink></div>
+     <div ><button><NavLink to="/">continue with your course</NavLink></button></div>
     </div>
     </div>
     </body>
 </html>
 `;
+
 router1.post("/createcheckout1", async (req, res) => {
     console.log("hiiiii")
   const  {products}  = await req.body;
