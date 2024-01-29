@@ -188,6 +188,55 @@ const htmlsuccesspage = `
     </body>
 </html>
 `;
+
+
+const htmlcancelpage = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: blue;
+            text-align:center;
+            margin-bottom:30px;
+            
+        }
+        .cont{
+            // display:flex;
+             align-items:center;
+            // flex-direction:column;
+            border:2px;
+            text-align:center;
+            
+        }
+       button{
+            
+            // margin:45%;
+            margin-top:30px;
+            margin-left:45%;
+       }
+      
+    </style>
+    <title>payment</title>
+</head>
+<body>
+<div className="cont">
+<div>
+    <h1>Payment cancelled and go back </h1>
+    <div>
+    
+     <div > <a href="https://moonlit-cranachan-da39c6.netlify.app/"> <button >recheck the course</button></a></div>
+    </div>
+    </div>
+    </body>
+</html>
+`;
 router1.post("/createcheckout1", async (req, res) => {
     console.log("hiiiii")
   const  {products}  = await req.body;
@@ -262,7 +311,7 @@ router1.get("/Success",async(req,res)=>{
    
 })
 router1.get("/Cancel",(req,res)=>{
-    return res.send({msg:"cancel"})
+    return res.send(htmlcancelpage)
 })
 
 router1.get("/bought",async (req,res)=>{
