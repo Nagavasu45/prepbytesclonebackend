@@ -243,8 +243,7 @@ const lineItems = products.map((prod) => ({
       success_url: "https://prepbytesclonebackend.onrender.com/Success",
       cancel_url: "https://prepbytesclonebackend.onrender.com/Cancel",
     });
-    const ressee=await coursestr.create(storeitem[0])
-    console.log(ressee)
+   
     res.json({ id: session.id });
     
     
@@ -255,9 +254,10 @@ const lineItems = products.map((prod) => ({
 });
 
 
-router1.get("/Success",(req,res)=>{
+router1.get("/Success",async(req,res)=>{
     
-    
+    const ressee=await coursestr.create(storeitem[0])
+    console.log(ressee)
     return res.send(htmlsuccesspage)
    
 })
