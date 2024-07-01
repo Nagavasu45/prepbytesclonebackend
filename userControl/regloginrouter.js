@@ -1,6 +1,6 @@
 
 
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs")
 // const auth = require("../authee/auther");
 const jwt=require("jsonwebtoken");
 const { reg } = require("../schemamodel/registermodel");
